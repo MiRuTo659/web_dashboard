@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JungleFlood Guard</title>
+  <link rel="icon" type="image/x-icon" href="img/logo_nonbg.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/app_page_Dashboard.css" />
+</head>
+<body>
+  <div class="dashboard">
+        <aside class="sidebar">
+        <div class="logo">
+            <img src="img/logo_nonbg.png" alt="Logo" width="150" height="150" />
+            </div>
+
+            <div class="menu-items">
+                <ul>
+                    <li><img src="icon/speedometer2.svg" width="20" /> <span>Dashboard</span></li>
+                    <li><img src="icon/motherboard.svg" width="20" /> <span>Device</span></li>
+                    <li><img src="icon/sliders2.svg" width="20" /> <span>Config Device</span></li>
+                    <li><img src="icon/floppy-fill.svg" width="20" /> <span>Export Data</span></li>
+                    <li><img src="icon/telephone-forward.svg" width="20" /> <span>Service Contact</span></li>
+                </ul>
+            </div>
+
+            <div class="logout">
+                <ul>
+                    <li onclick="window.location.href='page_login.html'" style="cursor:pointer;">
+                    <img src="icon/box-arrow-right.svg" alt="icon" width="20" />
+                <span>Log Out</span>
+                </li>
+                </ul>
+        </div>
+    </aside>
+
+    <main class="main-content">
+      
+
+      <div class="welcome-section">
+        <div class="welcome-card">
+          <img src="img/people_card.jpg" alt="Jellyfish" />
+          <h3>Welcome back,<br><span>Admin JFG System</span></h3>
+        </div>
+
+        <div class="gauge-card">
+          <h4>System Status</h4>
+          <div class="gauge">100%</div>
+        </div>
+
+        <div class="referral-card">
+          <h4>Status Alert</h4>
+          <div class="gauge">None</div>
+        </div>
+      </div>
+
+      <div class="chart-section">
+        <div class="chart">
+          <img src="img/ex_chart.png" width="700" height="150"/>
+          <ul>
+            <li><img src="icon/arrow-up.svg" width="20" /> <span>Water Level</span></li>
+            <li><img src="icon/arrow-up.svg" width="20" /> <span>Water Flow</span></li>
+            <li><img src="icon/arrow-up.svg" width="20" /> <span>Rain Fall</span></li>
+            <li><img src="icon/arrow-up.svg" width="20" /> <span>PM 2.5</span></li>
+          </ul>
+        </div>
+        <div class="chart"><img src="img/water_level.jpg" width="200" height="150"/>
+          
+          <ul>
+            <li><img src="icon/arrow-up.svg" width="20" /> <span>Water Level: LOW</span></li>
+            <li><img src="icon/arrow-up.svg" width="20" /> <span>Water Flow : 10 m³/h</span></li>
+          </ul>
+        </div>
+        <div class="map-card">
+          <iframe width="1390" height="400" src="https://www.openstreetmap.org/export/embed.html?bbox=82.7490234375%2C4.806364708499998%2C114.76318359375001%2C21.22794190505816&amp;layer=mapnik" style="border: 1px solid black"></iframe><br/><small><a href="https://www.openstreetmap.org/?#map=6/13.15/98.76"></a></small>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

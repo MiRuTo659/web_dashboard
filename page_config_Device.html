@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JungleFlood Guard</title>
+  <link rel="icon" type="image/x-icon" href="img/logo_nonbg.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/app_page_config_Device.css" />
+
+</head>
+<body>
+  <div class="dashboard">
+
+    <aside class="sidebar">
+        <div class="logo">
+            <img src="img/logo_nonbg.png" alt="Logo" width="150" height="150" />
+            </div>
+
+            <div class="menu-items">
+                <ul>
+                    <li><img src="icon/speedometer2.svg" width="20" /> <span>Dashboard</span></li>
+                    <li><img src="icon/motherboard.svg" width="20" /> <span>Device</span></li>
+                    <li><img src="icon/sliders2.svg" width="20" /> <span>Config Device</span></li>
+                    <li><img src="icon/floppy-fill.svg" width="20" /> <span>Export Data</span></li>
+                    <li><img src="icon/telephone-forward.svg" width="20" /> <span>Service Contact</span></li>
+                </ul>
+            </div>
+
+            <div class="logout">
+                <ul>
+                    <li onclick="window.location.href='page_login.html'" style="cursor:pointer;">
+                    <img src="icon/box-arrow-right.svg" alt="icon" width="20" />
+                <span>Log Out</span>
+                </li>
+                </ul>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <main class="config-content">
+  <h2>Config Device</h2>
+
+  <div class="device-selector">
+    <label for="deviceSelect">Select Device:</label>
+    <select id="deviceSelect">
+      <option>Device 001</option>
+      <option>Device 002</option>
+    </select>
+  </div>
+
+    <hr style="margin: 16px 0; border: none; border-bottom: 2px solid #ccc; width: 100%;" />
+  <div class="config-grid">
+    <div class="config-box Information">
+        <h3>Device Information</h3>
+        <p>Device ID: 123456789</p>
+        <p>Firmware Version: 1.0.0</p>
+        <p>Last Updated: 2023-10-01</p>
+        <p>Battery Status: 85%</p>
+        <p>Signal Strength: -70 dBm</p>
+        <p>Location: Jungle Area</p>
+        <p>Device Status: Active</p>
+    </div>
+
+    <div class="config-box detect-water">
+        <h3>Set Alarm Level Water</h3>
+        <img src="img/water_level.jpg" alt="Water Level" width="450" height="250" />
+
+    </div>
+
+    <div class="config-box configWPR">
+      <h4>Set Level Water (m)</h4>
+        <input type="number" id="waterLevel" placeholder="Enter water level" />
+      <h4>Set PM2.5 Alarm (µg/m³)</h4>
+        <input type="number" id="pm25Level" placeholder="Enter PM2.5 level" />
+      <h4>Set Rain Alarm (mm)</h4>
+        <input type="number" id="rainLevel" placeholder="Enter rain level" />
+    </div>
+  </div>
+
+  <div class="battery-box configbattery">
+    <h3>Set Battery Charger and Manage PV</h3>
+    <div style="display: flex; align-items: center; gap: 32px;">
+        <!-- Battery Bar -->
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <div style="width: 60px; height: 28px; border: 2px solid #333; border-radius: 6px; position: relative; background: #e0e0e0;">
+                <div style="width: 85%; height: 100%; background: linear-gradient(90deg, #4caf50 70%, #cddc39 100%); border-radius: 4px 0 0 4px;"></div>
+                <div style="position: absolute; right: -8px; top: 8px; width: 8px; height: 12px; background: #333; border-radius: 2px;"></div>
+            </div>
+            <span style="font-size: 14px; margin-top: 4px;">85%</span>
+        </div>
+
+        <!-- Charger Max Input -->
+        <div>
+            <label for="chargerMax">Charger Max (%):</label>
+            <input type="number" id="chargerMax" placeholder="0-100%" min="0" step="0.1" style="width: 70px;" />
+        </div>
+
+        <!-- Battery Low Alarm Input -->
+        <div>
+            <label for="batteryLow">Alarm Battery Low (%):</label>
+            <input type="number" id="batteryLow" placeholder="0-100%" min="0" max="100" style="width: 60px;" />
+        </div>
+
+        <!-- Round Battery Charger Indicator -->
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <svg width="60" height="60">
+            <circle cx="30" cy="30" r="26" stroke="#e0e0e0" stroke-width="6" fill="none"/>
+            <circle cx="30" cy="30" r="26" stroke="#4caf50" stroke-width="6" fill="none"
+                stroke-dasharray="163.36"
+                stroke-dashoffset="0"
+                transform="rotate(-90 30 30)"/>
+            <text x="30" y="36" text-anchor="middle" font-size="16" fill="#f1f1f1" font-family="Arial">1</text>
+            </svg>
+            <span style="font-size: 13px;">battery Cycle Count</span>
+        </div>
+
+        <!-- Battery Cycle Count Setting -->
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <label for="batteryCycleCount" style="font-size: 14px;">ตั้งค่ารอบการชาร์จแบต (รอบ):</label>
+            <input type="number" id="batteryCycleCount" placeholder="เช่น 500" min="1" style="width: 70px; margin-bottom: 4px;" />
+            <span style="font-size: 12px; color: #f1f1f1;">ถึงจำนวนรอบนี้จะมีการแจ้งเตือนเปลี่ยนแบตใหม่</span>
+        </div>
+
+            <div class="status-indicator">
+                <p>Status :</p>
+                <h1 class="status-good">GOOD</h1>
+            </div>
+        </div>
+
+    </div>
+    <!-- Save Button -->
+    <div class="config-button">
+        <button id="saveButton" class="save">Save Settings</button>
+        <button id="cancelButton" class="cancel">Cancel</button>
+    </div>
+
+</main>
+
+    </main>
+    <script src="/js/script_page_config_Device.js"></script>
+  </div>
+
+</body>
+</html>
