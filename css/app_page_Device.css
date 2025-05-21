@@ -91,10 +91,34 @@ body {
     filter: invert(61%) sepia(94%) saturate(749%) hue-rotate(162deg) brightness(102%) contrast(101%);
 }
 
-
 /* Main Content */
 .main-content {
   flex: 1;
   padding: 20px;
   background-color: #0f172a;
+}
+
+.device-content {
+  padding: 20px;
+  color: white;
+}
+
+.device-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.device-box p {
+  text-align: left;
+}
+
+.device-box {
+  background-color: #1e293b; /* กล่องเข้ม */
+  border: 2px solid #3b82f6; /* เส้นขอบน้ำเงิน */
+  border-radius: 10px;
+  padding: 20px;
+  min-height: 300px;
+  text-align: center;
+  font-size: 18px;
 }
