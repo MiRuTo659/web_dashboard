@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>JungleFlood Guard</title>
+    <link rel="icon" type="image/x-icon" href="img/logo_nonbg.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/app_page_service.css" />
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="img/logo_nonbg.png" alt="Logo" width="150" height="150" />
+            </div>
+            <div class="menu-items">
+                <ul>
+                    <li onclick="window.location.href='page_Dashboard.html'"><img src="icon/speedometer2.svg" width="20" /> <span>Dashboard</span></li>
+                    <li onclick="window.location.href='page_Device.html'"><img src="icon/motherboard.svg" width="20" /> <span>Device</span></li>
+                    <li onclick="window.location.href='page_Config_Device.html'"><img src="icon/sliders2.svg" width="20" /> <span>Config Device</span></li>
+                    <li onclick="window.location.href='page_Export_Data.html'"><img src="icon/floppy-fill.svg" width="20" /> <span>Export Data</span></li>
+                    <li onclick="window.location.href='page_Service_Contact.html'"><img src="icon/telephone-forward.svg" width="20" /> <span style="color: #00ffff;">Service Contact</span></li>
+                </ul>
+            </div>
+            <div class="logout">
+                <ul>
+                    <li onclick="window.location.href='page_login.html'" style="cursor:pointer;">
+                        <img src="icon/box-arrow-right.svg" alt="icon" width="20" />
+                        <span>Log Out</span>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <h1>Service Contact</h1>
+            <hr />
+
+            <div class="service-grid">
+                <!-- แบบฟอร์มแจ้งปัญหา -->
+                <div class="service-box blue-box">
+                    <h3>แจ้งปัญหา / ร้องขอ</h3>
+                    <label>ชื่อผู้ร้องขอ:</label>
+                    <input type="text" id="requester-name" placeholder="กรอกชื่อ-นามสกุล" />
+                    <label>วัน-เวลา ที่พบปัญหา:</label>
+                    <input type="datetime-local" id="problem-date" />
+                    <label>รายละเอียด:</label>
+                    <textarea id="problem-details" rows="4" placeholder="อธิบายปัญหา / รายการที่ต้องการให้บริการ"></textarea>
+                    <button onclick="submitRequest()">ส่งคำขอ</button>
+                </div>
+
+                <!-- ข้อมูลติดต่อทีมเทคนิค -->
+                <div class="service-box orange-box">
+                    <h3>ข้อมูลการติดต่อทีมเทคนิค</h3>
+                    <p>ชื่อ: ทีม JungleFlood Service</p>
+                    <p>เบอร์โทร: 099-999-9999</p>
+                    <p>LINE ID: jungleflood_support</p>
+                    <p>ที่อยู่: สำนักงานใหญ่ จ.เชียงใหม่</p>
+                </div>
+
+                <!-- รายการคำขอบริการที่รอดำเนินการ -->
+                <div class="service-box green-box">
+                    <h3>คำขอบริการที่กำลังดำเนินการ</h3>
+                    <ul>
+                        <li>ตรวจสอบอุปกรณ์ #023 (กำลังดำเนินการ)</li>
+                        <li>ตั้งค่าระบบวัดน้ำใหม่ #045</li>
+                    </ul>
+                </div>
+
+                <!-- รายการที่ดำเนินการเสร็จแล้ว -->
+                <div class="service-box red-box">
+                    <h3>บริการที่เสร็จสิ้นแล้ว</h3>
+                    <ul>
+                        <li>เปลี่ยนเซ็นเซอร์ #012 (20/05/2025)</li>
+                        <li>อัพเดต Firmware #033 (18/05/2025)</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/service_contact.js"></script>
+</body>
+</html>

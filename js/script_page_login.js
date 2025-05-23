@@ -11,7 +11,7 @@ document.getElementById('loginButton').addEventListener('click', function(e) {
     const correctPassword = 'password123';
 
     if (username === correctUsername && password === correctPassword) {
-        window.location.href = 'index.html';
+        window.location.href = 'page_Dashboard.html';
     } else {
         alert('Incorrect username or password.');
     }
